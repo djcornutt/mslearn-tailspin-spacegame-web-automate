@@ -109,7 +109,6 @@ stages:
     dependsOn: Provision
     variables:
       WebAppNameDev: $[ dependencies.Provision.outputs['RunTerraform.WebAppNameDev'] ]
-  - deployment: Deploy
     pool:
       vmImage: 'ubuntu-18.04'
     environment: dev
